@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+      "esModuleInterop": true,
+      "jsx": "react",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+      ],
+      "strict": true,
+      "target": "esnext",
+      "baseUrl": "./src",
+      "paths": {
+        "@components/*": ["components/*"],
+        "@reduxHooks/*": ["reduxHooks/*"],
+        "@reducers/*": ["reducers/*"],
+        "@layout/*": ["layout/*"],
+        "@store/*": ["store/*"],
+      }
+  },
+  "exclude": ["node_modules"],
+}
