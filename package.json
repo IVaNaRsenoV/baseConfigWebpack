@@ -15,6 +15,7 @@
     "@babel/preset-react": "^7.22.3",
     "@babel/preset-typescript": "^7.21.5",
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/faker": "^6.6.9",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "@types/react-redux": "^7.1.25",
@@ -22,6 +23,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/redux": "^3.6.0",
     "babel-loader": "^9.1.2",
+    "faker": "^6.6.6",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.6",
@@ -42,6 +44,8 @@
     "webpack-merge": "^5.9.0"
   },
   "dependencies": {
-    "css-loader": "^6.8.1"
+    "chart.js": "^4.3.0",
+    "css-loader": "^6.8.1",
+    "react-chartjs-2": "^5.2.0"
   }
 }

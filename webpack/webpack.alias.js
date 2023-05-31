@@ -1,11 +1,14 @@
 module.exports = {
   resolve: {
     alias: {
-      "@styles": "/styles",
       "@components": "/components",
       "@reduxHooks": "/reduxHooks",
+      "@interfaces": "/interfaces",
       "@reducers": "/reducers",
+      "@assets": "/assets",
       "@layout": "/layout",
+      "@routes": "/routes",
+      "@styles": "/styles",
       "@store": "/store",
     },
   },

@@ -13,9 +13,12 @@
       "target": "esnext",
       "baseUrl": "./src",
       "paths": {
+        "@interfaces/*": ["interfaces/*"],
         "@components/*": ["components/*"],
         "@reduxHooks/*": ["reduxHooks/*"],
         "@reducers/*": ["reducers/*"],
+        "@assets/*": ["assets/*"],
+        "@routes/*": ["routes/*"],
         "@layout/*": ["layout/*"],
         "@store/*": ["store/*"],
       }

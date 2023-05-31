@@ -1,3 +1,3 @@
-export { About } from "./About";
-export { Help } from "./Help";
-export { Info } from "./Info";
+export { BarChart } from "./BarChart";
+export { LineChart } from "./LineChart";
+export { PieChart } from "./PieChart";
