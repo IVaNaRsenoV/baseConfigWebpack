@@ -1,14 +1,22 @@
-// random.test.js
-function getRandomNumber(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import axios from 'axios';
+jest.mock('axios');
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 
+it("axios", async () => {
+  const mockResponse = {
+    data: {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    }
+  };
+  mockedAxios.get.mockResolvedValue(mockResponse);
 
-test('getRandomNumber generates a random number within the specified range', () => {
-  const min = 1;
-  const max = 100;
-  const randomNumber = getRandomNumber(min, max);
+  const url = "https://jsonplaceholder.typicode.com/posts/1";
+  const response = await mockedAxios.get(url);
 
-  expect(randomNumber).toBeGreaterThanOrEqual(min);
-  expect(randomNumber).toBeLessThanOrEqual(max);
+  expect(mockedAxios.get).toHaveBeenCalledTimes(1);
+  expect(mockedAxios.get).toHaveBeenCalledWith(url);
+  expect(response.data).toEqual(mockResponse.data);
 });
